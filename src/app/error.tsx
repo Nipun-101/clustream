@@ -1,18 +1,16 @@
 "use client";
 
-import { PageHeader } from "@/components/page-header";
-
 export default function ErrorPage({ retry }: { retry: () => void }) {
   return (
-    <div className="space-y-4">
-      <PageHeader title="Something went wrong" />
+    <main className="container-page py-24 text-center">
+      <h1 className="text-3xl text-heading">Something went wrong</h1>
       <button
         type="button"
         onClick={() => retry()}
-        className="h-11 rounded-lg bg-foreground px-4 text-sm font-medium text-background"
+        className="mt-6 min-h-11 rounded-xl bg-sand px-5 text-sm font-semibold text-sand-ink"
       >
         Try again
       </button>
-    </div>
+    </main>
   );
 }

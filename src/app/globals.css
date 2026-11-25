@@ -1,37 +1,78 @@
 @import "tailwindcss";
 
-/* Placeholder palette. Replace with the design tokens. */
-:root {
-  color-scheme: light dark;
-  --background: #ffffff;
-  --foreground: #171717;
-  --surface: #f4f4f5;
-  --muted: #63636b;
-  --border: #e4e4e7;
-}
+@theme {
+  --breakpoint-md: 47.5rem; /* 760px: the design's mobile nav cut-off */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --surface: #1c1c1f;
-    --muted: #a1a1aa;
-    --border: #27272a;
+  --color-ink: #0a0c10;
+  --color-surface: #11141a;
+  --color-surface-2: #1a1f29;
+  --color-panel: #0f1218;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-heading: #f5f6f9;
+  --color-body: #eceef2;
+  --color-sand: #e7b97a;
+  --color-sand-soft: #f3d9ae;
+  --color-sand-ink: #1a1206;
+  --color-slate2: #8aa4d6;
+  --color-ok: #8fc59a;
+  --color-muted: #b3bac9;
+  --color-muted-label: #9ca5b8;
+  --color-muted-faint: #8d95a7;
+  --color-hero-body: #1f2533;
+
+  --animate-status: status 2.8s ease-in-out infinite;
+
+  @keyframes status {
+    50% {
+      opacity: 0.3;
+    }
   }
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-inter-tight), var(--font-inter), sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+  --font-mono: var(--font-jetbrains), monospace;
 }
 
 @layer base {
-  body {
-    @apply bg-background font-sans text-foreground;
+  html {
+    @apply bg-ink;
+    color-scheme: dark;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-ink font-sans text-body;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-semibold;
+  }
+
+  h1,
+  h2 {
+    @apply text-balance;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-slate2);
+    outline-offset: 3px;
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 1288px; /* 1240px of content plus the side padding */
+  margin-inline: auto;
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
 }

@@ -1,14 +1,20 @@
-import { CircleUserRound, Compass, House, Library } from "lucide-react";
-
 export const siteConfig = {
   name: "Clustream",
-  description: "Clustream web application",
+  url: "https://clustream.tech",
+  domain: "clustream.tech",
+  title: "Clustream — Software that holds up",
+  description:
+    "Clustream builds the systems behind the screen: document pipelines, backends, web apps and Android apps. Designed with care, tuned for cost and stability, and run in production for real users.",
+  email: "support@clustream.tech",
+  mailto: "mailto:support@clustream.tech",
+  /** TODO: point at the Ez Prep case study once that page exists. */
+  caseStudyHref: "#",
 };
 
-/** Drives both the mobile tab bar and the desktop sidebar. */
-export const navItems = [
-  { href: "/", label: "Home", icon: House },
-  { href: "/explore", label: "Explore", icon: Compass },
-  { href: "/library", label: "Library", icon: Library },
-  { href: "/profile", label: "Profile", icon: CircleUserRound },
-] as const;
+export const navLinks = [
+  { href: "/#services", label: "Services" },
+  { href: "/#pipelines", label: "Pipelines" },
+  { href: "/#products", label: "Products" },
+  { href: "/#process", label: "Process" },
+  { href: "/#contact", label: "Contact" },
+];

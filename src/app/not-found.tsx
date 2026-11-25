@@ -1,13 +1,15 @@
 import Link from "next/link";
-import { PageHeader } from "@/components/page-header";
 
 export default function NotFound() {
   return (
-    <div className="space-y-4">
-      <PageHeader title="Page not found" />
-      <Link href="/" className="font-medium underline">
+    <main className="container-page py-24 text-center">
+      <h1 className="text-3xl text-heading">Page not found</h1>
+      <Link
+        href="/"
+        className="mt-6 inline-flex min-h-11 items-center rounded-xl bg-sand px-5 text-sm font-semibold text-sand-ink"
+      >
         Back to home
       </Link>
-    </div>
+    </main>
   );
 }

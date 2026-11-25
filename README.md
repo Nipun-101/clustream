@@ -1,6 +1,6 @@
 # Clustream
 
-Mobile-first Next.js app (App Router, React, TypeScript, Tailwind CSS).
+The clustream.tech site. Next.js (App Router), React, TypeScript, Tailwind CSS.
 
 ## Development
 
@@ -19,6 +19,10 @@ npm run dev        # http://localhost:3000
 
 ## Structure
 
-- `src/app` – routes, layout, global styles
-- `src/components/shell` – header, sidebar, bottom tab bar
-- `src/config/site.ts` – app name and navigation items
+- `src/app` – routes, layout, global styles and design tokens
+- `src/components/home` – landing page sections
+- `src/components/layout` – header, mobile menu, footer, logo
+- `src/components/ui` – shared building blocks
+- `src/components/illustrations` – inline SVG artwork
+- `src/config/site.ts` – site details and navigation links
+- `clustream-assets` – design brief and source assets
