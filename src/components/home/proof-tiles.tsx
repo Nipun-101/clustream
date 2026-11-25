@@ -1,7 +1,7 @@
 const proofs = [
   {
     figure: "1 lakh+",
-    text: "previous-year questions extracted from documents and published by our own pipeline.",
+    text: "pieces of content structured and shipped to production by one pipeline.",
   },
   {
     figure: "1000s",

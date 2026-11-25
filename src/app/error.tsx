@@ -2,7 +2,7 @@
 
 export default function ErrorPage({ retry }: { retry: () => void }) {
   return (
-    <main className="container-page py-24 text-center">
+    <main className="container-page pt-40 pb-24 text-center">
       <h1 className="text-3xl text-heading">Something went wrong</h1>
       <button
         type="button"

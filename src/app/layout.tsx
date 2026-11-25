@@ -5,6 +5,8 @@ import {
   Inter_Tight,
   JetBrains_Mono,
 } from "next/font/google";
+import { SiteFooter } from "@/components/layout/site-footer";
+import { SiteHeader } from "@/components/layout/site-header";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
@@ -13,7 +15,7 @@ const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const interTight = Inter_Tight({
   variable: "--font-inter-tight",
   subsets: ["latin"],
-  weight: "600",
+  weight: ["500", "600"],
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -54,7 +56,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       data-scroll-behavior="smooth"
       className={`${inter.variable} ${interTight.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }

@@ -1,20 +1,26 @@
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { NavAnchor } from "./nav-anchor";
 
 /** `tone` names the background the logo sits on. */
-export function Logo({ tone }: { tone: "light" | "dark" }) {
+export function Logo({
+  tone,
+  size = "large",
+}: {
+  tone: "light" | "dark";
+  size?: "small" | "large";
+}) {
+  const small = size === "small";
+
   return (
-    <Link
+    <NavAnchor
       href="/"
-      className={`inline-flex min-h-11 items-center gap-2.5 font-display font-semibold tracking-[-0.02em] ${
-        tone === "light" ? "text-[22px] text-ink" : "text-xl text-heading"
-      }`}
+      className={`inline-flex min-h-11 items-center gap-2.5 font-display font-semibold tracking-[-0.02em] ${small ? "text-xl" : "text-[22px]"} ${tone === "light" ? "text-ink" : "text-heading"}`}
     >
       <svg
         aria-hidden
         viewBox="0 0 34 34"
         fill="none"
-        className={tone === "light" ? "size-[34px]" : "size-[30px]"}
+        className={small ? "size-[30px]" : "size-[34px]"}
       >
         <rect
           width="34"
@@ -31,6 +37,6 @@ export function Logo({ tone }: { tone: "light" | "dark" }) {
         <circle cx="23" cy="17" r="2" className="fill-sand" />
       </svg>
       {siteConfig.name}
-    </Link>
+    </NavAnchor>
   );
 }

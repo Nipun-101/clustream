@@ -1,4 +1,9 @@
-export function PipelineIllustration() {
+/** `arrowId` must differ between pages: hidden routes stay in the DOM. */
+export function PipelineIllustration({
+  arrowId = "pl-ar",
+}: {
+  arrowId?: string;
+}) {
   return (
     <svg
       className="h-auto w-full"
@@ -8,7 +13,7 @@ export function PipelineIllustration() {
     >
       <defs>
         <marker
-          id="pl-ar"
+          id={arrowId}
           markerWidth="8"
           markerHeight="8"
           refX="6"
@@ -63,7 +68,7 @@ export function PipelineIllustration() {
         fill="none"
         stroke="#E7B97A"
         strokeWidth="2"
-        markerEnd="url(#pl-ar)"
+        markerEnd={`url(#${arrowId})`}
       ></path>
       <rect
         x="156"
@@ -112,7 +117,7 @@ export function PipelineIllustration() {
         fill="none"
         stroke="#E7B97A"
         strokeWidth="2"
-        markerEnd="url(#pl-ar)"
+        markerEnd={`url(#${arrowId})`}
       ></path>
       <rect
         x="288"
@@ -155,7 +160,7 @@ export function PipelineIllustration() {
         fill="none"
         stroke="#E7B97A"
         strokeWidth="2"
-        markerEnd="url(#pl-ar)"
+        markerEnd={`url(#${arrowId})`}
       ></path>
       <rect
         x="420"
@@ -241,7 +246,7 @@ export function PipelineIllustration() {
         stroke="#E7B97A"
         strokeWidth="2"
         strokeDasharray="5 6"
-        markerEnd="url(#pl-ar)"
+        markerEnd={`url(#${arrowId})`}
       ></path>
       <text
         x="262"

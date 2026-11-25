@@ -21,8 +21,11 @@ npm run dev        # http://localhost:3000
 
 - `src/app` – routes, layout, global styles and design tokens
 - `src/components/home` – landing page sections
+- `src/components/contact` – contact page sections (`/contact`)
+- `src/components/services` – services page sections (`/services`)
+- `src/components/products` – Ez Prep page sections (`/products`)
 - `src/components/layout` – header, mobile menu, footer, logo
 - `src/components/ui` – shared building blocks
 - `src/components/illustrations` – inline SVG artwork
 - `src/config/site.ts` – site details and navigation links
-- `clustream-assets` – design brief and source assets
+- `design/clustream-assets` – design brief and source assets

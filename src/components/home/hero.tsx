@@ -1,11 +1,9 @@
-import { SiteHeader } from "@/components/layout/site-header";
 import { Accent } from "@/components/ui/accent";
 import { siteConfig } from "@/config/site";
 
 export function Hero() {
   return (
-    <div className="bg-[linear-gradient(180deg,#f3eee6_0%,#f6e1ce_26%,#dad8e4_56%,#a9b2cb_100%)] text-ink [color-scheme:light]">
-      <SiteHeader />
+    <div className="bg-[linear-gradient(180deg,#f3eee6_0%,#f6e1ce_26%,#dad8e4_56%,#a9b2cb_100%)] pt-header text-ink [color-scheme:light]">
       <section
         aria-labelledby="hero-title"
         className="container-page flex flex-col items-center pt-5 text-center md:pt-12"

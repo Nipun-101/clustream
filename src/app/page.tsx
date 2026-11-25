@@ -7,11 +7,11 @@ import { Process } from "@/components/home/process";
 import { Products } from "@/components/home/products";
 import { ProofTiles } from "@/components/home/proof-tiles";
 import { Services } from "@/components/home/services";
-import { SiteFooter } from "@/components/layout/site-footer";
+import { PageTransition } from "@/components/layout/page-transition";
 
 export default function HomePage() {
   return (
-    <>
+    <PageTransition>
       <main>
         <Hero />
         <PipelinePanel />
@@ -23,7 +23,6 @@ export default function HomePage() {
         <Process />
         <Contact />
       </main>
-      <SiteFooter />
-    </>
+    </PageTransition>
   );
 }

@@ -69,6 +69,41 @@
   }
 }
 
+/* Room for the header that overlays the top of every page. */
+@utility pt-header {
+  padding-top: calc(5.75rem + env(safe-area-inset-top));
+}
+
+/* Route transitions: the old page fades out, then the new one rises in. */
+::view-transition-old(.page-exit) {
+  animation: 150ms ease-in both page-fade-out;
+}
+
+::view-transition-new(.page-enter) {
+  animation: 320ms 100ms ease-out both page-fade-in;
+}
+
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 @utility container-page {
   width: 100%;
   max-width: 1288px; /* 1240px of content plus the side padding */
