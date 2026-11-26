@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Accent } from "@/components/ui/accent";
 import { siteConfig } from "@/config/site";
 
@@ -14,28 +15,26 @@ export function Hero() {
         </p>
         <h1
           id="hero-title"
-          className="mt-5 max-w-[800px] text-[clamp(40px,7.2vw,88px)] leading-[1.06] tracking-[-0.035em] md:mt-7"
+          className="mt-5 max-w-[800px] text-[clamp(40px,7.2vw,88px)] leading-[1.02] tracking-[-0.035em] md:mt-7"
         >
           Software that <Accent>holds up</Accent> when thousands show up.
         </h1>
-        <p className="mt-5 max-w-[640px] leading-[1.6] text-hero-body md:mt-6 md:text-[19px]">
-          Clustream builds the systems behind the screen: document pipelines,
-          backends, web apps and Android apps. Designed with care, tuned for
-          cost and stability, and run in production for real users.
+        <p className="mt-[22px] max-w-[640px] text-[clamp(16px,2vw,19px)] leading-[1.6] text-pretty text-hero-body md:mt-7">
+          {siteConfig.description}
         </p>
         <div className="mt-[22px] flex flex-col items-center gap-3 sm:flex-row md:mt-7">
           <a
             href={siteConfig.mailto}
-            className="inline-flex min-h-[52px] items-center rounded-[14px] bg-ink px-[26px] text-[15px] font-semibold text-white transition-colors hover:bg-surface-2"
+            className="inline-flex min-h-[52px] items-center rounded-[14px] bg-ink px-[26px] text-[15px] font-medium text-white transition-colors hover:bg-surface-2"
           >
             Start a conversation
           </a>
-          <a
-            href="#services"
-            className="inline-flex min-h-[54px] items-center rounded-[14px] border border-ink/12 bg-white/55 px-[26px] text-[15px] font-medium transition-colors hover:bg-white/80"
+          <Link
+            href="/services"
+            className="inline-flex min-h-[52px] items-center rounded-[14px] border border-ink/15 bg-white/55 px-[26px] text-[15px] font-medium transition-colors hover:bg-white/80"
           >
             See what we build
-          </a>
+          </Link>
         </div>
         <p className="mt-5 text-sm text-hero-body md:mt-7">
           Trusted to carry thousands of users in production.

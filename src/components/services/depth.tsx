@@ -3,7 +3,7 @@ import { WorkflowArt } from "@/components/illustrations/services";
 import { Accent } from "@/components/ui/accent";
 import { SectionIntro, sectionClass } from "@/components/ui/section-intro";
 import { Tags } from "@/components/ui/tags";
-import { cardClass } from "./card";
+import { cardClass } from "@/components/ui/card";
 
 const specialities = [
   {
@@ -13,7 +13,7 @@ const specialities = [
     tags: ["OCR", "Schema output", "Auto-retry", "Low cost"],
   },
   {
-    title: "Language-model workflows",
+    title: "Applied intelligence",
     art: <WorkflowArt />,
     text: "We put language models to work inside real products, with care. Each workflow is designed step by step, evaluated against real cases and reviewed by people where it matters, so results stay dependable as usage grows.",
     tags: ["Workflows", "Evaluation", "Human review"],
@@ -29,7 +29,7 @@ export function Depth() {
         eyebrow="Where we go deep"
         title={
           <>
-            Data pipelines and language-model workflows,{" "}
+            Data pipelines and applied-intelligence systems,{" "}
             <Accent>done properly.</Accent>
           </>
         }

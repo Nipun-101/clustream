@@ -2,60 +2,56 @@
 export function SourcePage() {
   return (
     <svg
-      aria-hidden
-      viewBox="0 0 210 260"
-      className="mx-auto h-auto w-full max-w-[210px]"
+      viewBox="0 0 220 260"
+      role="img"
+      aria-label="A scanned document page being read"
+      className="mx-auto h-auto w-full max-w-[230px]"
     >
       <rect
-        x="0.5"
-        y="0.5"
-        width="209"
-        height="259"
+        x="10"
+        y="6"
+        width="200"
+        height="248"
         rx="12"
-        fill="#171c27"
-        stroke="#2a3140"
-      />
+        fill="#161B25"
+        stroke="#2A3140"
+      ></rect>
       <rect
-        x="19"
-        y="21"
-        width="94"
+        x="28"
+        y="26"
+        width="90"
         height="8"
         rx="4"
-        className="fill-sand"
-        opacity="0.75"
-      />
+        fill="#E7B97A"
+        fillOpacity="0.75"
+      ></rect>
+      <rect x="28" y="50" width="164" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="64" width="140" height="6" rx="3" fill="#2E3646"></rect>
       <rect
-        x="19.5"
-        y="88.5"
-        width="171"
-        height="52"
+        x="28"
+        y="90"
+        width="164"
+        height="50"
         rx="8"
-        fill="#1c2230"
-        stroke="#2a3140"
-      />
-      <g fill="#2e3646">
-        {[
-          [46, 172],
-          [61, 147],
-          [157, 172],
-          [172, 157],
-          [186, 172],
-          [201, 115],
-          [226, 63],
-        ].map(([y, width]) => (
-          <rect key={y} x="19" y={y} width={width} height="6" rx="3" />
-        ))}
-      </g>
-      <g fill="#3a4357">
-        <rect x="29" y="101" width="125" height="6" rx="3" />
-        <rect x="29" y="117" width="94" height="6" rx="3" />
-      </g>
-      <path
-        d="M6 147H204"
-        className="stroke-slate2"
+        fill="#1C2230"
+        stroke="#2A3140"
+      ></rect>
+      <rect x="38" y="102" width="120" height="6" rx="3" fill="#3A4357"></rect>
+      <rect x="38" y="118" width="90" height="6" rx="3" fill="#3A4357"></rect>
+      <rect x="28" y="156" width="164" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="170" width="150" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="184" width="164" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="198" width="110" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="222" width="60" height="6" rx="3" fill="#2E3646"></rect>
+      <line
+        x1="16"
+        y1="146"
+        x2="204"
+        y2="146"
+        stroke="#8AA4D6"
         strokeWidth="2"
-        strokeDasharray="5 4"
-      />
+        strokeDasharray="5 5"
+      ></line>
     </svg>
   );
 }

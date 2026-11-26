@@ -4,8 +4,8 @@ import { SplitFeature } from "@/components/ui/split-feature";
 
 const points = [
   {
-    title: "Output that matches your schema",
-    text: "Pages go in, structured records come out, shaped exactly the way your application expects them.",
+    title: "Titles, types and chunks, in your schema",
+    text: "Documents are classified by type and subtype, split into titled chunks and emitted as records shaped exactly the way your application expects them.",
   },
   {
     title: "Reads layout, not just text",

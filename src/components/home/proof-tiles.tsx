@@ -1,7 +1,37 @@
+import {
+  BracketsIcon,
+  DocumentIcon,
+  FlowIcon,
+  ScanIcon,
+} from "@/components/ui/icons";
+
+const highlights = [
+  {
+    icon: DocumentIcon,
+    title: "Document parsing",
+    text: "Any layout, any length, split by the document's own structure.",
+  },
+  {
+    icon: BracketsIcon,
+    title: "Structured conversion",
+    text: "Typed records in the schema your product already uses.",
+  },
+  {
+    icon: FlowIcon,
+    title: "LLM pipelines",
+    text: "Model steps that are tested, bounded and recoverable.",
+  },
+  {
+    icon: ScanIcon,
+    title: "Efficient OCR",
+    text: "Layout-aware reading at the lowest cost per page we can reach.",
+  },
+];
+
 const proofs = [
   {
-    figure: "1 lakh+",
-    text: "pieces of content structured and shipped to production by one pipeline.",
+    figure: "5 lakh+",
+    text: "pieces of content (titles, chunks and records) extracted from documents and published by our own pipelines.",
   },
   {
     figure: "1000s",
@@ -28,6 +58,18 @@ export function ProofTiles() {
             <p className="mt-3.5 text-[15px] leading-[23px] text-muted">
               {proof.text}
             </p>
+          </li>
+        ))}
+      </ul>
+      <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {highlights.map(({ icon: Icon, title, text }) => (
+          <li
+            key={title}
+            className="flex flex-col gap-2.5 rounded-[20px] border border-line bg-surface p-6"
+          >
+            <Icon className="size-6 text-sand" />
+            <h3 className="text-lg tracking-[-0.01em] text-heading">{title}</h3>
+            <p className="text-sm leading-[1.55] text-muted">{text}</p>
           </li>
         ))}
       </ul>
