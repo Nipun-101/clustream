@@ -3,7 +3,7 @@ import { NavAnchor } from "@/components/layout/nav-anchor";
 import { Accent } from "@/components/ui/accent";
 import { SectionIntro } from "@/components/ui/section-intro";
 import { siteConfig } from "@/config/site";
-import { cardClass } from "./card";
+import { cardClass } from "@/components/ui/card";
 
 const ways = [
   {
@@ -14,11 +14,11 @@ const ways = [
     href: `${siteConfig.mailto}?subject=New%20project`,
   },
   {
-    label: "Products",
-    title: "Our own products",
-    text: "We build and run products of our own, like Ez Prep, on the same foundations we offer to clients.",
-    action: "See Ez Prep",
-    href: "/products",
+    label: "Applied Intelligence",
+    title: "Dependable Intelligence",
+    text: "Retrieval, model routing and multi-step systems that stay accurate, bounded and affordable in production.",
+    action: "See how it works",
+    href: "/applied-intelligence",
   },
   {
     label: "Support",

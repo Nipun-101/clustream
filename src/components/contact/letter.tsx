@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 const topics = [
   { label: "New project", subject: "New project" },
   { label: "Support", subject: "Support" },
-  { label: "Ez Prep", subject: "Ez Prep" },
+  { label: "Applied Intelligence", subject: "Applied Intelligence" },
   { label: "Something else", subject: "Hello from the website" },
 ];
 

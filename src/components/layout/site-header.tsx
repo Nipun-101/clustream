@@ -9,7 +9,7 @@ import { NavAnchor } from "./nav-anchor";
 const themes = {
   /** On the landing page's light hero sky. */
   light: {
-    link: "text-[#353c4d] hover:text-ink aria-[current=page]:text-ink",
+    link: "text-[#3b4252] hover:text-ink aria-[current=page]:text-ink",
     cta: "bg-ink text-white hover:bg-surface-2",
   },
   /** On every other (dark) page. */

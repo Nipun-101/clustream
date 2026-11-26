@@ -72,7 +72,7 @@ export const capabilities = [
     ),
   },
   {
-    title: "Language-model workflows",
+    title: "Applied intelligence",
     text: "Designed step by step, tested on real cases and kept under human review.",
     tags: ["WORKFLOWS", "EVALUATION", "REVIEW"],
     icon: (
@@ -167,9 +167,9 @@ export const faqs = [
       "Yes, where they genuinely help. We design the workflow step by step, test it against real cases and keep people in the loop where it matters.",
   },
   {
-    question: "Do you build products of your own?",
+    question: "Can you make language models reliable enough for production?",
     answer:
-      "We do. Ez Prep is our own product, built and run on the same foundations we offer to clients.",
+      "Yes, that is the focus of our Applied Intelligence work: retrieval you can trace, outputs checked before they act, costs kept predictable, and failures that are caught and measured.",
   },
   {
     question: "How do we get started?",

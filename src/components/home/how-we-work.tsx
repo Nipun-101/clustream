@@ -27,7 +27,7 @@ export function HowWeWork() {
           A small team that <Accent>thinks</Accent> before it builds.
         </>
       }
-      lead="The engineers behind Clustream bring deep experience in infrastructure, scalability and language-model workflows. We stay hands-on, so the people who design your system are the people who build it."
+      lead="The engineers behind Clustream bring deep experience in infrastructure, scalability and machine learning, from neural networks to production language-model systems. We stay hands-on, so the people who design your system are the people who build it."
       illustration={<FoundationIllustration />}
       points={points}
     />

@@ -3,17 +3,19 @@ import { siteConfig } from "@/config/site";
 import { Eyebrow } from "./section-heading";
 import { leadClass, sectionClass } from "./section-intro";
 
-/** Closing contact card of the dark pages. */
+/** Closing contact card of a page. */
 export function PageContact({
+  eyebrow = "Contact",
   title,
   text,
   subject,
   textClassName = "max-w-[540px]",
 }: {
+  eyebrow?: string;
   title: ReactNode;
   text: string;
   /** Pre-filled email subject. */
-  subject: string;
+  subject?: string;
   textClassName?: string;
 }) {
   return (
@@ -28,7 +30,7 @@ export function PageContact({
           className="pointer-events-none absolute -top-[220px] left-1/2 -ml-[360px] h-[420px] w-[720px] bg-[radial-gradient(closest-side,rgb(231_185_122/0.16),transparent)]"
         />
         <div className="relative">
-          <Eyebrow>Contact</Eyebrow>
+          <Eyebrow>{eyebrow}</Eyebrow>
         </div>
         <h2
           id="contact-title"
@@ -38,7 +40,11 @@ export function PageContact({
         </h2>
         <p className={`relative ${textClassName} ${leadClass}`}>{text}</p>
         <a
-          href={`${siteConfig.mailto}?subject=${encodeURIComponent(subject)}`}
+          href={
+            subject
+              ? `${siteConfig.mailto}?subject=${encodeURIComponent(subject)}`
+              : siteConfig.mailto
+          }
           className="relative mt-2 inline-flex min-h-[58px] max-w-full items-center rounded-2xl bg-sand px-7 text-[clamp(15px,4vw,18px)] font-semibold break-all text-sand-ink transition-colors hover:bg-sand-soft"
         >
           {siteConfig.email}

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { SectionHeading } from "./section-heading";
+import { SectionIntro, sectionClass } from "./section-intro";
 
 /** Heading and illustration on the left, numbered points on the right. */
 export function SplitFeature({
@@ -21,17 +21,18 @@ export function SplitFeature({
     <section
       id={id}
       aria-labelledby={`${id}-title`}
-      className="container-page scroll-mt-[-64px] pt-24 md:scroll-mt-[-120px] md:pt-40"
+      className={`${sectionClass} scroll-mt-[-64px] md:scroll-mt-[-120px]`}
     >
       <div className="grid items-start gap-16 lg:grid-cols-2 lg:gap-20">
         <div>
-          <SectionHeading
+          <SectionIntro
+            className="gap-5!"
             id={`${id}-title`}
             eyebrow={eyebrow}
             title={title}
             lead={lead}
           />
-          <div className="mt-10 rounded-3xl border border-line bg-panel p-4 md:p-7">
+          <div className="mt-10 rounded-3xl border border-line bg-panel p-[clamp(16px,3vw,28px)]">
             {illustration}
           </div>
         </div>
@@ -39,16 +40,16 @@ export function SplitFeature({
           {points.map((point, index) => (
             <li
               key={point.title}
-              className="grid grid-cols-[2.5rem_1fr] border-b border-line py-6 md:grid-cols-[3rem_1fr] md:py-7"
+              className="grid grid-cols-[2.5rem_1fr] border-b border-line py-[22px] md:grid-cols-[3rem_1fr] md:py-7"
             >
               <span
                 aria-hidden
-                className="pt-1 font-mono text-[13px] text-sand"
+                className="pt-1.5 font-mono text-[13px] text-sand"
               >
                 {String(index + 1).padStart(2, "0")}
               </span>
               <div>
-                <h3 className="text-[22px] leading-[1.25] tracking-[-0.015em] text-heading">
+                <h3 className="text-[22px] leading-[normal] tracking-[-0.015em] text-heading">
                   {point.title}
                 </h3>
                 <p className="mt-2 leading-[1.65] text-muted">{point.text}</p>

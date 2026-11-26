@@ -33,7 +33,7 @@ export function PipelinePanel() {
       aria-label="Illustration of a document pipeline"
       className="relative z-10 mx-auto -mt-[150px] max-w-[1168px] px-6"
     >
-      <div className="overflow-hidden rounded-3xl border border-line bg-panel shadow-[0_40px_90px_rgb(0_0_0/0.55)]">
+      <div className="overflow-hidden rounded-3xl border border-white/10 bg-panel shadow-[0_40px_90px_rgb(0_0_0/0.55)]">
         <div className="flex h-[45px] items-center gap-3 border-b border-line px-5 font-mono text-muted-label">
           <span aria-hidden className="flex gap-2">
             {[0, 1, 2].map((dot) => (
@@ -82,13 +82,13 @@ export function PipelinePanel() {
             <pre className="mt-3.5 overflow-x-auto rounded-xl border border-line bg-[#0a0d14] p-4 font-mono text-xs leading-[21px] text-body">
               <code className="font-mono">
                 {"{\n  "}
-                <Key>subject</Key>: {placeholder}
+                <Key>title</Key>: {placeholder}
                 {",\n  "}
-                <Key>question</Key>: {placeholder}
+                <Key>doc_type</Key>: {placeholder}
                 {",\n  "}
-                <Key>options</Key>: [{placeholder}, {placeholder}]{",\n  "}
-                <Key>answer</Key>: {placeholder}
+                <Key>subtype</Key>: {placeholder}
                 {",\n  "}
+                <Key>chunks</Key>: [{placeholder}, {placeholder}]{",\n  "}
                 <Key>source_page</Key>: <Value>12</Value>
                 {"\n}"}
               </code>

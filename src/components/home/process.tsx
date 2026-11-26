@@ -1,5 +1,6 @@
 import { Accent } from "@/components/ui/accent";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { cardClass } from "@/components/ui/card";
+import { SectionIntro, sectionClass } from "@/components/ui/section-intro";
 
 const steps = [
   {
@@ -25,9 +26,9 @@ export function Process() {
     <section
       id="process"
       aria-labelledby="process-title"
-      className="container-page scroll-mt-[-64px] pt-24 md:scroll-mt-[-120px] md:pt-40"
+      className={`${sectionClass} scroll-mt-[-64px] md:scroll-mt-[-120px]`}
     >
-      <SectionHeading
+      <SectionIntro
         id="process-title"
         eyebrow="Process"
         title={
@@ -36,19 +37,19 @@ export function Process() {
           </>
         }
       />
-      <ol className="mt-12 grid gap-5 md:mt-14 md:grid-cols-2 lg:grid-cols-4">
+      <ol className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         {steps.map((step, index) => (
           <li
             key={step.title}
-            className="rounded-[20px] border border-line bg-surface p-7"
+            className={`${cardClass} gap-3.5 rounded-[20px]! p-[26px] md:p-7`}
           >
             <span aria-hidden className="font-mono text-[13px] text-sand">
               {String(index + 1).padStart(2, "0")}
             </span>
-            <h3 className="mt-3 text-[22px] leading-[1.25] tracking-[-0.025em] text-heading">
+            <h3 className="text-[22px] leading-[1.25] tracking-[-0.025em] text-heading">
               {step.title}
             </h3>
-            <p className="mt-3 text-[15px] leading-[24.5px] text-muted">
+            <p className="text-[15px] leading-[24.5px] text-muted">
               {step.text}
             </p>
           </li>

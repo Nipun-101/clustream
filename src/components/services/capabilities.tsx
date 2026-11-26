@@ -1,7 +1,7 @@
 import { Accent } from "@/components/ui/accent";
 import { SectionIntro, sectionClass } from "@/components/ui/section-intro";
 import { Tags } from "@/components/ui/tags";
-import { cardClass } from "./card";
+import { cardClass } from "@/components/ui/card";
 import { capabilities, essentials } from "./content";
 
 export function Capabilities() {
