@@ -47,7 +47,7 @@ export default function AppliedIntelligencePage() {
             </>
           }
           text="Tell us what the system needs to get right and what it costs when it does not. We reply with questions and a plan, not a pitch."
-          subject="Applied Intelligence"
+          subject="Applied intelligence"
           textClassName="max-w-[560px]"
         />
       </main>

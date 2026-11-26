@@ -1,5 +1,5 @@
 import { Accent } from "@/components/ui/accent";
-import { cardClass } from "@/components/ui/card";
+import { IconCards } from "@/components/ui/icon-cards";
 import {
   CheckSquareIcon,
   PulseIcon,
@@ -45,19 +45,7 @@ export function Habits() {
         }
         lead="New models and techniques appear constantly. What keeps a system dependable is how we choose, test and adopt them."
       />
-      <ul className="mt-14 grid gap-5 min-[641px]:grid-cols-2 min-[1101px]:grid-cols-4">
-        {habits.map(({ icon: Icon, title, text }) => (
-          <li key={title} className={`${cardClass} gap-3.5 p-7`}>
-            <span className="mb-2 flex size-[52px] items-center justify-center rounded-[14px] bg-surface-2 text-sand">
-              <Icon className="size-[26px]" />
-            </span>
-            <h3 className="text-[22px] leading-[normal] tracking-[-0.02em] text-heading">
-              {title}
-            </h3>
-            <p className="leading-[1.65] text-muted">{text}</p>
-          </li>
-        ))}
-      </ul>
+      <IconCards cards={habits} className="mt-14" />
     </section>
   );
 }

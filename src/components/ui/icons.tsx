@@ -118,3 +118,25 @@ export const PulseIcon = icon(
     <path d="M3 12h4l3-8 4 16 3-8h4"></path>
   </>,
 );
+
+export const LockIcon = icon(
+  <>
+    <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+    <path d="M8 11V8a4 4 0 0 1 8 0v3"></path>
+  </>,
+);
+
+export const ShieldIcon = icon(
+  <>
+    <path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6Z"></path>
+    <path d="M9 12l2 2 4-4"></path>
+  </>,
+);
+
+export const WifiIcon = icon(
+  <>
+    <path d="M5 12.5a10 10 0 0 1 14 0"></path>
+    <path d="M8.5 16a5 5 0 0 1 7 0"></path>
+    <circle cx="12" cy="19" r="1"></circle>
+  </>,
+);

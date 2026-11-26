@@ -257,7 +257,7 @@ export function RetrievalDiagram() {
         fontSize="12"
         fill="#9CA5B8"
       >
-        VECTOR INDEX
+        VECTOR DB
       </text>
       <path
         d="M348 86H380"
@@ -364,9 +364,11 @@ export function RetrievalDiagram() {
         fill="#12161E"
         stroke="#232A38"
       ></rect>
-      <rect x="28" y="218" width="170" height="8" rx="4" fill="#3A4357"></rect>
-      <rect x="28" y="236" width="300" height="6" rx="3" fill="#2E3646"></rect>
-      <rect x="28" y="250" width="240" height="6" rx="3" fill="#2E3646"></rect>
+      <text x="28" y="232" className="font-mono" fontSize="11" fill="#9CA5B8">
+        RAG ANSWER · BUILT ONLY FROM RETRIEVED PASSAGES
+      </text>
+      <rect x="28" y="244" width="300" height="6" rx="3" fill="#2E3646"></rect>
+      <rect x="28" y="258" width="240" height="6" rx="3" fill="#2E3646"></rect>
       <rect
         x="384"
         y="226"
@@ -808,6 +810,217 @@ export function SystemsDiagram() {
         fill="#9CA5B8"
       >
         BOUNDED STEPS · TYPED OUTPUTS · HUMAN CHECKPOINT
+      </text>
+    </svg>
+  );
+}
+
+/** Documents, vector database and model inside one boundary. */
+export function LocalDiagram() {
+  return (
+    <svg
+      viewBox="0 0 520 380"
+      role="img"
+      aria-label="Documents, a vector database and a local language model all sit inside a dashed boundary labelled your environment; a link to a remote service outside is blocked"
+      className="h-auto w-full"
+    >
+      <defs>
+        <marker
+          id="l-ar"
+          markerWidth="8"
+          markerHeight="8"
+          refX="6"
+          refY="4"
+          orient="auto"
+        >
+          <path d="M0 0L8 4L0 8Z" fill="#E7B97A"></path>
+        </marker>
+      </defs>
+      <rect
+        x="370"
+        y="6"
+        width="140"
+        height="40"
+        rx="12"
+        fill="none"
+        stroke="#3A4357"
+        strokeDasharray="4 5"
+      ></rect>
+      <text
+        x="440"
+        y="31"
+        textAnchor="middle"
+        className="font-mono"
+        fontSize="11"
+        fill="#9CA5B8"
+      >
+        REMOTE API
+      </text>
+      <path
+        d="M440 124V76"
+        stroke="#3A4357"
+        strokeWidth="2"
+        strokeDasharray="4 5"
+        fill="none"
+      ></path>
+      <path
+        d="M432 56L448 72M448 56L432 72"
+        stroke="#E7B97A"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+      ></path>
+      <text
+        x="424"
+        y="104"
+        textAnchor="end"
+        className="font-mono"
+        fontSize="11"
+        fill="#E7B97A"
+      >
+        NOTHING LEAVES
+      </text>
+      <rect
+        x="10"
+        y="70"
+        width="500"
+        height="300"
+        rx="22"
+        fill="#0D1016"
+        stroke="#E7B97A"
+        strokeDasharray="6 6"
+      ></rect>
+      <text x="30" y="100" className="font-mono" fontSize="11" fill="#E7B97A">
+        YOUR ENVIRONMENT
+      </text>
+      <rect
+        x="30"
+        y="130"
+        width="96"
+        height="110"
+        rx="12"
+        fill="#171C26"
+        stroke="#34405A"
+      ></rect>
+      <rect
+        x="44"
+        y="146"
+        width="36"
+        height="6"
+        rx="3"
+        fill="#E7B97A"
+        fillOpacity="0.8"
+      ></rect>
+      <rect x="44" y="162" width="64" height="5" rx="2.5" fill="#2E3646"></rect>
+      <rect x="44" y="174" width="52" height="5" rx="2.5" fill="#2E3646"></rect>
+      <rect x="44" y="186" width="64" height="5" rx="2.5" fill="#2E3646"></rect>
+      <rect x="44" y="198" width="40" height="5" rx="2.5" fill="#2E3646"></rect>
+      <text
+        x="78"
+        y="262"
+        textAnchor="middle"
+        className="font-mono"
+        fontSize="11"
+        fill="#9CA5B8"
+      >
+        DOCUMENTS
+      </text>
+      <path
+        d="M130 185H166"
+        stroke="#E7B97A"
+        strokeWidth="2"
+        fill="none"
+        markerEnd="url(#l-ar)"
+      ></path>
+      <rect
+        x="172"
+        y="130"
+        width="96"
+        height="110"
+        rx="14"
+        fill="#1A1F29"
+        stroke="#2F384A"
+      ></rect>
+      <circle cx="198" cy="164" r="4" fill="#8AA4D6"></circle>
+      <circle cx="226" cy="156" r="4" fill="#8AA4D6" fillOpacity="0.6"></circle>
+      <circle cx="240" cy="188" r="4" fill="#E7B97A"></circle>
+      <circle cx="206" cy="206" r="4" fill="#8AA4D6" fillOpacity="0.6"></circle>
+      <circle cx="232" cy="218" r="4" fill="#E7B97A"></circle>
+      <text
+        x="220"
+        y="262"
+        textAnchor="middle"
+        className="font-mono"
+        fontSize="11"
+        fill="#9CA5B8"
+      >
+        VECTOR DB
+      </text>
+      <path
+        d="M272 185H308"
+        stroke="#E7B97A"
+        strokeWidth="2"
+        fill="none"
+        markerEnd="url(#l-ar)"
+      ></path>
+      <rect
+        x="314"
+        y="130"
+        width="176"
+        height="110"
+        rx="18"
+        fill="#E7B97A"
+        fillOpacity="0.12"
+        stroke="#E7B97A"
+      ></rect>
+      <text
+        x="402"
+        y="180"
+        textAnchor="middle"
+        className="font-sans"
+        fontSize="17"
+        fontWeight="600"
+        fill="#F3D9AE"
+      >
+        Local model
+      </text>
+      <text
+        x="402"
+        y="202"
+        textAnchor="middle"
+        className="font-mono"
+        fontSize="11"
+        fill="#C5CCDA"
+      >
+        on your hardware
+      </text>
+      <path
+        d="M402 244V288"
+        stroke="#E7B97A"
+        strokeWidth="2"
+        fill="none"
+        markerEnd="url(#l-ar)"
+      ></path>
+      <rect
+        x="314"
+        y="294"
+        width="176"
+        height="48"
+        rx="12"
+        fill="#151A23"
+        stroke="#2A3140"
+      ></rect>
+      <text
+        x="402"
+        y="323"
+        textAnchor="middle"
+        className="font-mono"
+        fontSize="11"
+        fill="#C5CCDA"
+      >
+        YOUR APPLICATION
+      </text>
+      <text x="30" y="330" className="font-mono" fontSize="10" fill="#9CA5B8">
+        ON-PREMISES · PRIVATE CLOUD · EDGE
       </text>
     </svg>
   );
