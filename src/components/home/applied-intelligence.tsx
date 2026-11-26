@@ -5,8 +5,9 @@ import { Accent } from "@/components/ui/accent";
 import { SectionIntro, sectionClass } from "@/components/ui/section-intro";
 
 const strengths = [
-  "Document retrieval on vector databases and current embedding models",
-  "Model routing, cost control and local models at the edge",
+  "Vector databases and RAG on current embedding models",
+  "Model routing and cost control",
+  "Language models run locally, inside your own boundary",
   "Multi-step systems with guardrails, checks and measured failure rates",
 ];
 

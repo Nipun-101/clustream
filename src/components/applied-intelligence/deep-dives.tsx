@@ -5,6 +5,7 @@ import {
 } from "@/components/illustrations/applied-intelligence-page";
 import { Accent } from "@/components/ui/accent";
 import { SplitFeature } from "@/components/ui/split-feature";
+import { LocalModels } from "./local-models";
 
 const retrievalPoints = [
   {
@@ -12,20 +13,20 @@ const retrievalPoints = [
     text: "Chunks follow headings, tables and clauses, so a passage keeps its meaning and its place in the source.",
   },
   {
-    title: "Embedding models chosen by test",
-    text: "We compare current embedding models on your documents, not on public benchmarks, and keep the one that retrieves best.",
+    title: "Embeddings that capture meaning",
+    text: "Text becomes vectors, so semantically similar passages sit close together even when the wording differs. We compare current embedding models on your documents and keep the one that retrieves best.",
   },
   {
-    title: "Hybrid search and reranking",
-    text: "Vector and keyword search are combined, then reranked, so exact terms and related meaning both count.",
+    title: "Vector database with hybrid search",
+    text: "Vector search finds related meaning and keyword search catches exact terms. Results are reranked so the most accurate passages come first.",
   },
   {
-    title: "Citations on every answer",
-    text: "Each answer points to the pages it came from, so a reviewer can check it in seconds.",
+    title: "RAG that answers from sources",
+    text: "The model sees only the retrieved passages, answers from them, and cites the pages. If the sources do not contain the answer, it says so.",
   },
   {
     title: "Measured on your questions",
-    text: "A fixed set of real questions scores every change to chunking, models and prompts before it ships.",
+    text: "A fixed set of real questions scores every change to chunking, embeddings and prompts before it ships.",
   },
 ];
 
@@ -80,13 +81,13 @@ export function DeepDives() {
     <>
       <SplitFeature
         id="retrieval"
-        eyebrow="Retrieval"
+        eyebrow="Vector databases and RAG"
         title={
           <>
-            Finding the right passage, <Accent>every time.</Accent>
+            Search by meaning, answer from <Accent>your documents.</Accent>
           </>
         }
-        lead="Retrieval decides whether a model is useful or dangerous. We treat it as its own discipline, built on current embedding models, vector databases and evaluation."
+        lead="Retrieval-augmented generation (RAG) lets a model answer from your own documents instead of from memory. Text becomes embeddings in a vector database, so passages are found by meaning rather than exact words, and the answer is built only from what was found."
         illustration={<RetrievalDiagram />}
         points={retrievalPoints}
       />
@@ -102,6 +103,7 @@ export function DeepDives() {
         illustration={<RoutingDiagram />}
         points={routingPoints}
       />
+      <LocalModels />
       <SplitFeature
         id="systems"
         eyebrow="Multi-step systems"

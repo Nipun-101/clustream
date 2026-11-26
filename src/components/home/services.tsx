@@ -44,7 +44,7 @@ const services = [
   },
   {
     icon: FlowIcon,
-    title: "Applied intelligence",
+    title: "Applied Artificial intelligence",
     text: "Retrieval, routing and multi-step systems built by engineers who understand the models, and measured so they behave the same on day 200 as on day one.",
     tags: ["Retrieval", "Routing", "Evaluation"],
   },

@@ -37,13 +37,14 @@ export function AppliedIntelligenceHero() {
           </h1>
           <p className="max-w-[540px] text-[clamp(17px,2vw,20px)] leading-[1.6] text-pretty text-muted">
             Applied Intelligence is how Clustream builds with language models:
-            retrieval you can trace, routing that controls cost, and multi-step
-            systems that stay inside their limits. Engineered by people who
-            understand what happens inside the model.
+            retrieval you can trace, routing that controls cost, models that can
+            run entirely inside your own walls, and multi-step systems that stay
+            inside their limits. Engineered by people who understand what
+            happens inside the model.
           </p>
           <div className="flex flex-wrap gap-3">
             <a
-              href={`${siteConfig.mailto}?subject=Applied%20Intelligence`}
+              href={`${siteConfig.mailto}?subject=Applied%20intelligence`}
               className="inline-flex min-h-[52px] items-center rounded-[14px] bg-sand px-[26px] text-[15px] font-semibold text-sand-ink transition-colors hover:bg-sand-soft"
             >
               Talk to an engineer

@@ -51,9 +51,9 @@ export function Dependability() {
           }
         >
           <p className={leadClass}>
-            Every Applied Intelligence system ships with the numbers that matter
-            in front of you: whether answers are backed by sources, what each
-            task costs, where steps fail and how long users wait.
+            Every system we build ships with the numbers that matter in front of
+            you: whether answers are backed by sources, what each task costs,
+            where steps fail and how long users wait.
           </p>
           <p className="leading-[1.65] text-muted">
             The panel on the right is illustrative. The exact measures are
